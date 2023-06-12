@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="#about" class="logo">
+							<img src="AvatarMaker (1).png" alt="Avatar" class="avartar">
+					    </a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="#about">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="http://www.linkedin.com/in/olajide-balogun210" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:olajidebalogun@icloud.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/Balogun-olajide" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						
+						<!-- Featured Post -->
+						<article class="featured" id="about">
+							<header class="major">
+								<h2>Hi, I'm Olajide Balogun</h2>
+								<p>I'm dedicated to building seamless and user-centric interfaces for the web.</p>
+							</header>
+						</article>
+
+						<!-- Featured Post -->
+							<article class="post featured" id="about">
+								<header class="major">
+									<h2>About me</h2>
+									<p>I'm a Web Developer based in Lagos, Nigeria, passionate about building clean and intuitive user interfaces for the web. Constantly learning new technologies and skills, I strive to stay updated with the latest frontend web development trends to make the development process faster and more efficient. When I'm not coding, you can often find me enjoying movies, watching football matches, or playing Call of Duty for some fun and relaxation.</p>
+								</header>
+								<ul class="actions special">
+									<li><a href="#projects" class="button large" onclick="scrollToProjects()">View projects</a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+							<section id="projects" class="posts">
+								<article>
+									<header>
+										<h2>world countries</a></h2>
+									</header>
+									<a href="https://olajideworldcountries.netlify.app/" class="image fit"><img src="desktop-design-home-dark.jpg" alt="" /></a>
+									<div class="tools-used">
+										<ul class="tool-list">
+										  <li class="tool-item item-Html">HTML</li>
+										  <li class="tool-item item-Css">CSS</li>
+										  <li class="tool-item item-React">React</li>
+										</ul>
+									  </div>
+									<p>The world countries is a react app for accessing comprehensive information about countries worldwide. </p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Balogun-olajide/Rest-Countries-Api" class="button">Check it out</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2>Robofriends App</a></h2>
+									</header>
+									<a href="https://balogun-olajide.github.io/robofriendsapp/" class="image fit"><img src="robofriends .png" alt="Robofriends homepage" /></a>
+									<div class="tools-used">
+										<ul class="tool-list">
+										  <li class="tool-item item-Html">HTML</li>
+										  <li class="tool-item item-Css">CSS</li>
+										  <li class="tool-item item-React">React</li>
+										</ul>
+									  </div>
+									<p>A react powered robofriends app with diverse collection of robots.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Balogun-olajide/robofriendsapp" class="button">Check it out</a></li>
+									</ul>  
+								</article>
+							</section>
+
+							<script>
+								function scrollToProject() {
+									var projectSection = document.getElementById('projects');
+									projectSection.scrollIntoView({ behavior: 'smooth' });
+								}
+							</script>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" onclick="composeEmail(event)" /></li>
+								</ul>
+							</form>
+							
+							<script>
+								function composeEmail(event) {
+									event.preventDefault(); // Prevent the default form submission behavior
+									
+									// Get form field values
+									var name = document.getElementById('name').value;
+									var email = document.getElementById('email').value;
+									var message = document.getElementById('message').value;
+									
+									// Compose email body
+									var subject = "New message from " + name;
+									var body = "Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message;
+									
+									// Construct the mailto link
+									var mailtoLink = "mailto:olajidebalogun@icloud.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+									
+									// Open email client
+									window.location.href = mailtoLink;
+								}
+							</script>
+							
+						</section>
+						<section class="split contact">
+							<section>
+								<h3 class="icon fas fa-envelope"></h3>
+								<p><a href="mailto:olajidebalogun@icloud.com">olajidebalogun@icloud.com</a></p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
