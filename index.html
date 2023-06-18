@@ -29,7 +29,7 @@
 						<ul class="icons">
 							<li><a href="http://www.linkedin.com/in/olajide-balogun210" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="mailto:balogunolajide011@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="https://github.com/Balogun-olajide" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://github.com/Olajidecodez" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -134,65 +134,61 @@
 									function composeEmail(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
-    // Get form field values
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+                                                               // Get form field values
+                    var name = document.getElementById('name').value;
+                  var email = document.getElementById('email').value;
+                var message = document.getElementById('message').value;
 
-    // Validate Name and Email fields
-    var nameError = document.getElementById('name-error');
-    var emailError = document.getElementById('email-error');
-    
-    if (!name) {
-        nameError.textContent = "Please enter your Name.";
-    } else {
-        nameError.textContent = "";
-    }
+                  // Validate Name and Email fields
+                 var nameError = document.getElementById('name-error');
+              var emailError = document.getElementById('email-error');
+      
+               if (!name) {
+                        nameError.textContent = "Please enter your Name.";
+                } else {
+                  nameError.textContent = "";
+                }
 
-    if (!email) {
-        emailError.textContent = "Please enter your Email.";
-    } else {
-        emailError.textContent = "";
-    }
+         if (!email) {
+             emailError.textContent = "Please enter your Email.";
+            } else {
+              emailError.textContent = "";
+          }
 
-    // Validate Email format
-    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (email && !emailRegex.test(email)) {
-        emailError.textContent = "Please enter a valid Email address.";
-    }
+                // Validate Email format
+              var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (email && !emailRegex.test(email)) {
+                       emailError.textContent = "Please enter a valid Email address.";
+               }
 
-    // If there are any validation errors, stop further processing
-    if (!name || !email || (email && !emailRegex.test(email))) {
-        return;
-    }
+                   // If there are any validation errors, stop further processing
+                      if (!name || !email || (email && !emailRegex.test(email))) {
+                        return;
+                      }
 
-    // Clear form fields
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
+                       // Clear form fields
+                     document.getElementById('name').value = '';
+                     document.getElementById('email').value = '';
+                     document.getElementById('message').value = '';
 
-    // Clear error messages
-    nameError.textContent = "";
-    emailError.textContent = "";
+                     // Clear error messages   
+	                 nameError.textContent = "";
+                     emailError.textContent = "";
 
-    // Compose email body
-    var subject = "New message from " + name;
-    var body = "Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message;
+                       // Compose email body
+                      var subject = "New message from " + name;
+                      var body = "Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message;
 
-    // Construct the mailto link
-    var mailtoLink = "mailto:balogunolajide011@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        // Construct the mailto link
+                       var mailtoLink = "mailto:balogunolajide011@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        // Open email client
+                         window.location.href = mailtoLink;
+                      }
+							</script>
+						</section>	
+					</section>
+				</section>
 
-    // Open email client
-    window.location.href = mailtoLink;
-}
-
-								</script>
-							</section>
-							
-							</section>
-							
-							
-						</section>
 						<section class="split contact">
 							<section>
 								<h3 class="icon fas fa-envelope"></h3>
