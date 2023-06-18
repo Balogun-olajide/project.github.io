@@ -2676,6 +2676,7 @@ input, select, textarea {
 			transform: scale(1.05);
 		}
 
+	
 /* Actions */
 
 	ul.actions {
@@ -4561,6 +4562,11 @@ input, select, textarea {
 				padding: 0.25rem 1rem;
 			}
 
+		}
+
+		.error-message {
+			color: red;
+			font-style: italic;
 		}
 
 	#navPanel {
